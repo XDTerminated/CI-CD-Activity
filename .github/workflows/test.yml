@@ -1,4 +1,4 @@
-name: sayam-tang # {your name}-test or some other name that describes the workflow
+name: sayam-gupta # {your name}-test or some other name that describes the workflow
       # generally the name corresponds to the name of the file, but it can
       # always be different.
 
@@ -16,29 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up C++ environment
-        uses: actions/setup-cpp@v2
-        with:
-          compiler: 'gcc'  # You can use 'clang' or other compilers if needed
-
       - name: Build C++ code
         run: g++ main.cpp -o output_binary
-
-      - name: Run C++ executable
-        run: ./output_binary
-      ###################
-      # EXAMPLE STEP
-      ###################
-      # - name: name
-      #   uses: (external action)
-      #
-      #   - OR -
-      #
-      # - name: name
-      #   run: (command)
-
-      # feel free to play around with names and other things
-      # to see how they affect the UI on GitHub
 
       # how many steps do you need and what should they be?
       # what's the best way to split them up to be efficient?
